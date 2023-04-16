@@ -1,0 +1,40 @@
+
+const xNFTs = []
+
+function mintNFT(name, age, genre, nationality, label) {
+    const NFT = {
+        "name": name,
+        "age": age,
+        "genre": genre,
+        "nationality": nationality,
+        "label": label,
+    }
+    xNFTs.push(NFT);
+    console.log("Minted: " + name +"'s" + " Informations");
+}
+
+function listNFTs() {
+  for(let i = 0; i < xNFTs.length; i++){
+      console.log("\nNFT:\t\t\t\t" + (i + 1));
+      console.log("Name:\t\t\t" + xNFTs[i].name);
+      console.log("Age:\t\t\t" + xNFTs[i].age);
+      console.log("Genre:\t\t" + xNFTs[i].genre);
+      console.log("Nationality:\t\t" + xNFTs[i].nationality);
+      console.log("Label: \t" + xNFTs[i].label);
+  }
+}
+
+function getTotalSupply () {
+console.log("\n" + "Total Number of NFTs Minted: " + xNFTs.length);
+}
+
+mintNFT("Jay Park", 35, "Hip-Hop", "American", "More Vision");
+mintNFT("Simon Dominic", 39, "Hip-Hop", "Korean", "AOMG");
+mintNFT("pH-1", 33, "Hip-Hop", "American", "H1GHR MUSIC");
+mintNFT("DEAN", 30, "R&B", "Korean", "Universal Music Group");
+mintNFT("Crush", 30, "R&B", "Korean", "P NATION");
+listNFTs();
+getTotalSupply() 
+
+
+
